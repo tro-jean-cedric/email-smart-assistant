@@ -11,6 +11,7 @@ class User(Base):
     email = Column(String, unique=True, index=True)
     name = Column(String)
     outlook_profile = Column(String)
+    hashed_password = Column(String)
     preferences = Column(JSONB)
     created_at = Column(DateTime, default=datetime.utcnow)
     last_login = Column(DateTime)
